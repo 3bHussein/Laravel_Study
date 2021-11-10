@@ -1,1 +1,1 @@
-{{Route('home');}}
+{{route('home')}}

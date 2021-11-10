@@ -19,3 +19,13 @@ Route::get('/', function () {
 });
 
 Route::get('/get','Controller@index')->name('home');
+
+// route name
+Route::namespace('Front')->group(function(){
+    //that main all route  here access from only controller  in folder folder call front;
+    Route::get('totalSt/{id}',function($id){
+        return $id;
+    })->name('ToS');
+    
+
+});
