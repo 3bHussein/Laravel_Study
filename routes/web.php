@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Front\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+
+Route::get('/about','UserController@showuser')->name('about');
+
+Route::get('/g',function(){
+
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('/get','Controller@index')->name('home');
 
@@ -26,6 +38,6 @@ Route::namespace('Front')->group(function(){
     Route::get('totalSt/{id}',function($id){
         return $id;
     })->name('ToS');
-    
+
 
 });
